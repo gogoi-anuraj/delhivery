@@ -3,7 +3,6 @@ venv/
 env/
 
 # Data files — too large for git
-data/
 outputs/
 outputs/*.parquet
 outputs/*.pkl
