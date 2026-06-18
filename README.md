@@ -146,7 +146,7 @@ jupyter notebook
 
 ```bash
 cd streamlit_app
-streamlit run app.py
+streamlit run dashboard.py
 ```
 
 Opens at `http://localhost:8501`
@@ -236,8 +236,8 @@ Full list in `requirements.txt`.
 | Business translation | Strategy memo in ops leader language, no raw model outputs |
 | Creativity | Streamlit dashboard, node2vec on directed weighted graph, scorecard vs classifier |
 
-
 ---
+> This project has been done as a part of the Summer Projects, 2026 conducted by the Consulting & Analytics Club, IIT Guwahati
 
 *Analysis period: Sep 12 – Oct 3, 2018 | 142,502 clean trip segments*
 *Graph: 1,657 nodes, 2,783 edges | node2vec: dimensions=64, walks=200* 
