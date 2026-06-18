@@ -101,7 +101,7 @@ with col_left:
 
     st.dataframe(
         display.style.map(color_rec, subset=['Rec']),
-        use_container_width=True,
+        width='stretch',
         height=520,
     )
 
@@ -191,7 +191,7 @@ with col_right:
         plot_bgcolor='#f8f9fa',
         legend=dict(x=0.01, y=0.99),
     )
-    st.plotly_chart(fig_quad, use_container_width=True)
+    st.plotly_chart(fig_quad, width='stretch')
 
 # ── Breach rate comparison ───────────────────────────────────────────────
 st.markdown("---")
@@ -231,7 +231,7 @@ fig_breach.update_layout(
     legend=dict(x=0.01, y=0.99),
     yaxis=dict(range=[0, 115]),
 )
-st.plotly_chart(fig_breach, use_container_width=True)
+st.plotly_chart(fig_breach, width='stretch')
 
 # ── SHAP importance ──────────────────────────────────────────────────────
 st.markdown("---")
@@ -274,7 +274,7 @@ fig_shap.update_layout(
     plot_bgcolor='#f8f9fa',
     xaxis=dict(gridcolor='#e0e0e0'),
 )
-st.plotly_chart(fig_shap, use_container_width=True)
+st.plotly_chart(fig_shap, width='stretch')
 
 # ── Decision rules ───────────────────────────────────────────────────────
 st.markdown("---")
@@ -322,5 +322,5 @@ carting_wins.columns = [
     'Breach improvement','FTL min/km','Carting min/km'
 ]
 
-st.dataframe(carting_wins, use_container_width=True)
+st.dataframe(carting_wins, width='stretch')
 st.caption("Sorted by breach rate improvement — hubs where switching to Carting reduces SLA breaches most.")

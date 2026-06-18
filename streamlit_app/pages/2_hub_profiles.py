@@ -125,7 +125,7 @@ if selected_code in hub_lookup.index:
                 number={'suffix': '%', 'font': {'size': 28}}
             ))
             fig_gauge.update_layout(height=250, margin=dict(l=20,r=20,t=40,b=10))
-            st.plotly_chart(fig_gauge, use_container_width=True)
+            st.plotly_chart(fig_gauge, width='stretch')
             st.caption("Black line = network average (83.8%)")
         else:
             st.info("No SLA data available for this hub.")
@@ -157,7 +157,7 @@ if selected_code in hub_lookup.index:
                 coloraxis_showscale=False,
                 yaxis=dict(autorange='reversed')
             )
-            st.plotly_chart(fig_bar, use_container_width=True)
+            st.plotly_chart(fig_bar, width='stretch')
         else:
             st.info("No outgoing corridor data.")
 
@@ -178,7 +178,7 @@ if selected_code in hub_lookup.index:
         st.dataframe(
             incoming.style.background_gradient(
                 subset=['Median Factor'], cmap='RdYlGn_r', vmin=1.0, vmax=5.0),
-            use_container_width=True
+            width='stretch'
         )
     else:
         st.info("No incoming corridor data.")
@@ -210,7 +210,7 @@ if selected_code in hub_lookup.index:
             margin=dict(l=10,r=10,t=40,b=10),
             coloraxis_showscale=False
         )
-        st.plotly_chart(fig_tod, use_container_width=True)
+        st.plotly_chart(fig_tod, width='stretch')
     else:
         st.info("No SLA trip data for this hub.")
 

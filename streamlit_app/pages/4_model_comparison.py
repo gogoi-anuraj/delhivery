@@ -63,7 +63,7 @@ with col1:
         plot_bgcolor='#f8f9fa',
         yaxis=dict(gridcolor='#e0e0e0'),
     )
-    st.plotly_chart(fig_mae, use_container_width=True)
+    st.plotly_chart(fig_mae, width='stretch')
 
 with col2:
     st.subheader("Within-15% Accuracy (higher is better)")
@@ -94,7 +94,7 @@ with col2:
         plot_bgcolor='#f8f9fa',
         yaxis=dict(gridcolor='#e0e0e0', range=[0, 80]),
     )
-    st.plotly_chart(fig_w15, use_container_width=True)
+    st.plotly_chart(fig_w15, width='stretch')
 
 st.markdown("---")
 
@@ -143,7 +143,7 @@ with col3:
         plot_bgcolor='#f8f9fa',
         xaxis_tickangle=-10,
     )
-    st.plotly_chart(fig_waterfall_mae, use_container_width=True)
+    st.plotly_chart(fig_waterfall_mae, width='stretch')
 
 with col4:
     fig_waterfall_w15 = go.Figure(go.Waterfall(
@@ -167,7 +167,7 @@ with col4:
         plot_bgcolor='#f8f9fa',
         xaxis_tickangle=-10,
     )
-    st.plotly_chart(fig_waterfall_w15, use_container_width=True)
+    st.plotly_chart(fig_waterfall_w15, width='stretch')
 
 st.markdown("---")
 
@@ -213,7 +213,7 @@ fig_imp.update_layout(
     plot_bgcolor='#f8f9fa',
     xaxis=dict(gridcolor='#e0e0e0'),
 )
-st.plotly_chart(fig_imp, use_container_width=True)
+st.plotly_chart(fig_imp, width='stretch')
 
 # ── Key findings ─────────────────────────────────────────────────────────
 st.markdown("---")

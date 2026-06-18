@@ -113,7 +113,7 @@ with col_left:
             subset=['Median Factor'],
             cmap='RdYlGn_r', vmin=1.0, vmax=5.0
         ),
-        use_container_width=True,
+        width='stretch',
         height=500,
     )
 
@@ -132,7 +132,7 @@ with col_right:
                        line_dash='dash', line_color='orange',
                        annotation_text=f"Median {filtered['weight'].median():.2f}×")
     fig_hist.update_layout(height=280, margin=dict(l=10,r=10,t=40,b=10))
-    st.plotly_chart(fig_hist, use_container_width=True)
+    st.plotly_chart(fig_hist, width='stretch')
 
     st.subheader("Top 15 worst corridors")
     top15 = filtered.head(15).copy()
@@ -162,7 +162,7 @@ with col_right:
             yaxis=dict(autorange='reversed'),
             coloraxis_showscale=False,
         )
-        st.plotly_chart(fig_top, use_container_width=True)
+        st.plotly_chart(fig_top, width='stretch')
 
 # ── Destination hub heatmap ──────────────────────────────────────────────
 st.markdown("---")
@@ -201,7 +201,7 @@ fig_dest.update_layout(
     margin=dict(l=10,r=30,t=50,b=10),
     yaxis=dict(autorange='reversed'),
 )
-st.plotly_chart(fig_dest, use_container_width=True)
+st.plotly_chart(fig_dest, width='stretch')
 
 st.caption(
     "A hub appearing frequently as a destination with high delay factors "
