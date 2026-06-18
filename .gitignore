@@ -1,7 +1,8 @@
 # Virtual environment
 venv/
 env/
-
+*.zip
+Delhivery_Network_Intelligence/
 # Data files — too large for git
 outputs/
 outputs/*.parquet
